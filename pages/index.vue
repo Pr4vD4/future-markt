@@ -18,39 +18,74 @@ export default {
     },
     methods: {
         addTextShuffleAnimation() {
+
+            let anim = null
+            let allowText = true
+
             document.querySelectorAll('.shuffle-text').forEach((el) => {
 
                 el.addEventListener('mouseleave', () => {
-                    document.querySelector('marquee').remove()
-                    anime({
+                    try {
+                        anim.pause()
+                    } catch (e) {}
+                    document.querySelectorAll('.scrolling-text').forEach((element) => {
+                        element.textContent = ''
+                        element.style.marginLeft = - element.getBoundingClientRect().width + 'px'
+                    })
+                    anim = anime({
+                        targets: '.scrolling-text',
+                        translateX: '0',
+                        easing: 'linear',
+                        duration: 1
+                    })
+                    anim = anime({
                         targets: '.noise',
                         opacity: 1,
-                        duration: 499,
+                        duration: 399,
                     })
                 })
 
                 el.addEventListener('mouseover', () => {
+
+                    let width = null
+
                     // let text = el.textContent
                     shuffle({
                         text: el.dataset.initialText,
                         fps: 60,
                         animation: 'stay',
-                        duration: .35,
+                        duration: .4,
+                        glyphs: 'qwertyuiopaasdfghjklzxcvbnm123456789!@#$%^&*()_+[],./-=',
                         onUpdate: (out) => {
                             el.textContent = out
                         }
                     })
-                    let marquee = document.createElement('marquee');
-                    marquee.textContent = el.dataset.initialText;
-                    marquee.behavior = 'scroll';
-                    marquee.direction = 'right';
-                    marquee.setAttribute('scrollamount', 25);
-                    marquee.className = 'scrolling-text';
-                    document.querySelector('header').append(marquee)
-                    anime({
+
+                    anim = anime({
                         targets: '.noise',
                         opacity: 0,
-                        duration: 500,
+                        duration: 200,
+                        delay: 200,
+                        complete: () => {
+                            anime({
+                                targets: '.noise',
+                                opacity: 1,
+                                duration: 500,
+                            })
+                            document.querySelectorAll('.scrolling-text').forEach((element) => {
+                                let text = ' ' + el.dataset.initialText + ' '
+                                element.textContent = text.repeat(10)
+                                element.style.marginLeft = - (element.getBoundingClientRect().width / 100 * 95) + 'px'
+                            })
+                            anim = anime({
+                                targets: '.scrolling-text',
+                                translateX: '1000px',
+                                loop: true,
+                                easing: 'linear',
+                                duration: 8000
+                            })
+
+                        }
                     })
 
                 })
@@ -81,12 +116,12 @@ export default {
                     </nav>
                     <div class="header-title">
                         <div class="header-side-title d-flex left-side">
-                            <span class="glow">F</span>
-                            <span class="bounce-anim">U</span>
-                            <span class="gradient gradient-2">T</span>
-                            <span class="bounce-anim">U</span>
-                            <span class="gradient gradient-1">R</span>
-                            <span class="glow">E</span>
+                            <span class="">F</span>
+                            <span class="">U</span>
+                            <span class="">T</span>
+                            <span class="">U</span>
+                            <span class="">R</span>
+                            <span class="">E</span>
                         </div>
                         <div class="header-left-side-subtitle ">
                             We are digital agency that is crazy about web3, web design, marketing and chatbots projects
@@ -97,7 +132,7 @@ export default {
                 <div class="header-right-side d-flex flex-column align-items-end position-relative">
                     <div class="d-flex justify-content-between mt-4 col-8 ">
                         <a href="#" class="nav-link d-flex align-items-center header-localization">
-                            <span class="header-localization-rectangle mx-2"></span><span class="shuffle-text" data-initial-text="EN">EN</span>
+                            <span class="header-localization-rectangle mx-2"></span><span class="" data-initial-text="EN">EN</span>
                         </a>
                         <a href="#" class="nav-link nav-link-colored">[<span class="shuffle-text" data-initial-text="Discuss the future">Discuss the future</span><span
                                 class="header-nav-link-arrow"><img
@@ -105,7 +140,7 @@ export default {
                     </div>
                     <div class="header-title">
                         <div class="header-side-title right-side">
-                            <span class="glow">M</span><span class="bounce-anim">A</span><span class="gradient-2">R</span><span class="bounce-anim">K</span><span class="glow">T</span>
+                            <span class="">M</span><span class="">A</span><span class="">R</span><span class="">K</span><span class="">T</span>
                         </div>
                         <div class="header-right-side-subtitle ">
                             Digital agency
@@ -121,8 +156,15 @@ export default {
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Chatbots">Chatbots</span>]</a>
             </div>
         </div>
-        <canvas class="noise left-noise"></canvas>
-        <canvas class="noise right-noise"></canvas>
+        <div class="scrolling-text-container left-noise">
+            <span class="scrolling-text left-scrolling"></span>
+
+        </div>
+        <div class="scrolling-text-container right-noise">
+            <span class="scrolling-text right-scrolling"></span>
+
+        </div>
+        <canvas class="noise"></canvas>
         <img src="~/assets/img/man.webp" alt="man" class="man">
     </header>
 

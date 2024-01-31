@@ -131,21 +131,32 @@ header img {
 
 }
 
-.noise {
-    top: 10%;
+.scrolling-text-container {
+    display: flex;
+    align-items: center;
+    top: 9%;
     position: absolute;
     height: 20vh;
-    z-index: 1;
     opacity: 1;
+    overflow: hidden;
+}
+
+.noise {
+    top: 11%;
+    position: absolute;
+    height: 20vh;
+    z-index: 0;
+    opacity: 1;
+    width: 40vw;
 }
 
 .left-noise {
-    margin-right: 10vw;
+    margin-right: 12vw;
     width: 12vw;
 }
 
 .right-noise {
-    margin-left: 10vw;
+    margin-left: 15vw;
     width: 12vw;
 }
 
@@ -155,14 +166,19 @@ header img {
 
 .scrolling-text {
     font-family: "PP Neue Montreal Mono", serif;
-    font-size: 3.75vmax;
+    font-size: 2.25vmax;
     color: white;
-    letter-spacing: -.5vmin;
+    letter-spacing: -.4vmin;
     text-transform: uppercase;
     z-index: 1;
-    position: absolute;
-    top: 14%;
-    width: 25vw;
+    text-wrap: nowrap;
+    //position: absolute;
+    //top: 14%;
+    //width: 25vw;
+}
+
+.right-scrolling {
+    //margin-left: 10vw;
 }
 
 .header-title span {

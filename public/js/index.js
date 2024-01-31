@@ -8,7 +8,10 @@ function crete_noise(canvas) {
     }
 
     function getRandom() {
-        return Math.random() * 255;
+        if (Math.random() * 255 < 220) {
+            return 0;
+        } else return Math.random() * 255
+
     }
 
     function render() {
