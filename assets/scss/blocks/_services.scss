@@ -1,0 +1,117 @@
+#services {
+    background-color: #DFDFDF;
+}
+
+.services {
+    margin-top: 80px;
+    margin-bottom: 140px;
+
+    .title h1 {
+        color: $black;
+        text-align: center;
+
+        /* Desktop 1300px/H2 */
+        font-family: 'Affect_bold';
+        font-size: 160px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%; /* 160px */
+        letter-spacing: 8px;
+        text-transform: uppercase;
+    }
+
+
+    &__list {
+
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+
+        margin-top: 90px;
+
+        &-item {
+
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+
+            min-height: 150px;
+            width: 100%;
+
+
+            &-title {
+                color: $black;
+
+                /* Desktop 1300px/H3 */
+                font-family: 'Affect_bold';
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 36px */
+                letter-spacing: 1.8px;
+                text-transform: uppercase;
+            }
+
+            &-body {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &-description {
+                position: absolute;
+                right: 22%;
+
+                width: 350px;
+
+                color: $services-description;
+
+                //margin-right: -20%;
+
+                /* Desktop 1300px/Text */
+                font-family: "PP Neue Montreal Mono";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%; /* 14px */
+
+            }
+
+            &-price {
+
+                color: $black;
+
+                /* Desktop 1300px/Accent text */
+                font-family: 'Affect_bold';
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 21px */
+                text-transform: uppercase;
+
+            }
+
+
+        }
+
+        &-products {
+
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &-item {
+                color: $black;
+                font-family: 'Affect_bold';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 18px */
+                text-transform: uppercase;
+            }
+
+        }
+
+    }
+
+}

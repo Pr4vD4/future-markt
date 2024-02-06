@@ -1,4 +1,24 @@
 @import "bootstrap/scss/bootstrap.scss";
+
+@import "./variables";
+@import "./mixins";
+
 @import "./animate";
 @import "./fonts";
 @import "./blocks/header";
+@import "./blocks/our_works";
+@import "./blocks/about";
+@import "./blocks/services";
+@import "./blocks/connect";
+
+
+
+.reverse {
+    transform: rotateY(180deg);
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

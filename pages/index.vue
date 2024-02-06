@@ -27,10 +27,11 @@ export default {
                 el.addEventListener('mouseleave', () => {
                     try {
                         anim.pause()
-                    } catch (e) {}
+                    } catch (e) {
+                    }
                     document.querySelectorAll('.scrolling-text').forEach((element) => {
                         element.textContent = ''
-                        element.style.marginLeft = - element.getBoundingClientRect().width + 'px'
+                        element.style.marginLeft = -element.getBoundingClientRect().width + 'px'
                     })
                     anim = anime({
                         targets: '.scrolling-text',
@@ -75,7 +76,7 @@ export default {
                             document.querySelectorAll('.scrolling-text').forEach((element) => {
                                 let text = ' ' + el.dataset.initialText + ' '
                                 element.textContent = text.repeat(10)
-                                element.style.marginLeft = - (element.getBoundingClientRect().width / 100 * 95) + 'px'
+                                element.style.marginLeft = -(element.getBoundingClientRect().width / 100 * 95) + 'px'
                             })
                             anim = anime({
                                 targets: '.scrolling-text',
@@ -167,6 +168,336 @@ export default {
         <canvas class="noise"></canvas>
         <img src="~/assets/img/man.webp" alt="man" class="man">
     </header>
+
+    <main>
+        <!--   Our works    -->
+        <section id="our-works">
+            <div class="container our-works">
+
+                <div class="title d-flex flex-column">
+                    <h1>Our works</h1>
+                    <h2>We are equally involved in both design and development of our projects</h2>
+                </div>
+
+                <div class="filters d-flex justify-content-center">
+                    <div class="filter filter__active">All [0]</div>
+                    <div class="filter ">Web3 [0]</div>
+                    <div class="filter ">Websites [0]</div>
+                    <div class="filter ">Marketing [0]</div>
+                    <div class="filter ">Chatbots [0]</div>
+                    <div class="filter ">Telegram Apps [0]</div>
+                </div>
+
+
+                <!--       Cardboard         -->
+                <div class="cardboard container-fluid">
+                    <div class="big-card">
+                        <div class="big-card__img-container"></div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                AP estates & capitol hill
+                            </div>
+                            <div class="card-subtitle">
+                                Residential community in Detroit
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-small">
+                        <div class="card__img-container"></div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                AP estates & capitol hill
+                            </div>
+                            <div class="card-subtitle">
+                                Residential community in Detroit
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-small">
+                        <div class="card__img-container"></div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                GU Loans
+                            </div>
+                            <div class="card-subtitle">
+                                Web interface
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-small">
+                        <div class="card__img-container"></div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Weather chat-bot
+                            </div>
+                            <div class="card-subtitle">
+                                Telegram bot
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-small">
+                        <div class="card__img-container"></div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                First choice
+                            </div>
+                            <div class="card-subtitle">
+                                Urgent care clinic
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--       /Cardboard         -->
+
+                <!--       Pagination         -->
+                <div class="pagination__container container-fluid d-flex justify-content-center">
+                    <div class="pagination">
+                        <div class="pagination__prev">
+                            <div class="pagination__arrow reverse">
+                                <img src="~/assets/img/horizontal-arrow.svg" alt="">
+                            </div>
+                            <span>prev</span>
+                        </div>
+
+                        <div class="pagination__list">
+                            <div class="pagination__list-item active">
+                                1
+                            </div>
+                            <div class="pagination__list-item">
+                                2
+                            </div>
+                            <div class="pagination__list-item">
+                                3
+                            </div>
+                            <div class="pagination__list-item">
+                                4
+                            </div>
+                            <div class="pagination__list-item">
+                                5
+                            </div>
+                            <div class="pagination__list-item">
+                                6
+                            </div>
+                            <div class="pagination__list-gap">
+                                ...
+                            </div>
+                            <div class="pagination__list-item">
+                                500
+                            </div>
+                        </div>
+
+                        <div class="pagination__next">
+                            <div class="pagination__arrow">
+                                <img src="~/assets/img/horizontal-arrow.svg" alt="">
+                            </div>
+                            <span>next</span>
+                        </div>
+                    </div>
+                </div>
+                <!--       /Pagination         -->
+
+            </div>
+        </section>
+        <!--   /Our works    -->
+
+        <!--   About     -->
+        <section id="about">
+            <div class="about container">
+                <div class="title d-flex flex-column">
+                    <h1>ABoUT US</h1>
+                    <h2>Future Markt is a MULTIDISCIPLINARY digital agency founded in 2012. <span class="gray">We strive for a constant innovative approach and offer our clients cutting-edge technological solutions,
+                        helping them succeed in the digital environment</span></h2>
+                </div>
+                <div class="tv container-fluid">
+                    <img src="~/assets/img/Space.png">
+                </div>
+            </div>
+        </section>
+        <!--   /About     -->
+
+        <!--   Services     -->
+        <section id="services">
+            <div class="services container">
+                <div class="title d-flex flex-column">
+                    <h1>services</h1>
+                </div>
+
+                <div class="services__list container-fluid">
+                    <div class="services__list-item">
+                        <div class="services__list-item-title">
+                            Web3 development
+                        </div>
+                        <div class="services__list-item-body">
+                            <div class="services__list-products">
+                                <div class="services__list-products-item">
+                                    Smart contracts
+                                </div>
+                                <div class="services__list-products-item">
+                                    dApp
+                                </div>
+                                <div class="services__list-products-item">
+                                    De-Fi
+                                </div>
+                                <div class="services__list-products-item">
+                                    White/Litepaper 12312 123 123
+                                </div>
+                            </div>
+                            <div class="services__list-item-description">
+                                We strive to implement the web3 products as soon as possible so that it starts generating profit. Then we conduct tests and make corrections until the project becomes
+                                perfect
+                            </div>
+                            <div class="services__list-item-price">
+                                from $3000
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-item">
+                        <div class="services__list-item-title">
+                            Web products
+                        </div>
+                        <div class="services__list-item-body">
+                            <div class="services__list-products">
+                                <div class="services__list-products-item">
+                                    Corporate websites
+                                </div>
+                                <div class="services__list-products-item">
+                                    Online stores
+                                </div>
+                                <div class="services__list-products-item">
+                                    Web services
+                                </div>
+                                <div class="services__list-products-item">
+                                    Landing pages
+                                </div>
+                            </div>
+                            <div class="services__list-item-description">
+                                We turn your technical specifications into real business tool. We love large websites and web applications, but we also work on single-page sites
+                            </div>
+                            <div class="services__list-item-price">
+                                from $1000
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-item">
+                        <div class="services__list-item-title">
+                            Marketing
+                        </div>
+                        <div class="services__list-item-body">
+                            <div class="services__list-products">
+                                <div class="services__list-products-item">
+                                    Contextual ad
+                                </div>
+                                <div class="services__list-products-item">
+                                    Targeted ad
+                                </div>
+                                <div class="services__list-products-item">
+                                    SEO
+                                </div>
+                                <div class="services__list-products-item">
+                                    SMM
+                                </div>
+                            </div>
+                            <div class="services__list-item-description">
+                                We take a data-driven approach to create tailored campaigns that resonate with your target audience. From social media to email marketing, we'll help you reach your
+                                goals and increase ROI
+                            </div>
+                            <div class="services__list-item-price">
+                                from $1200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-item">
+                        <div class="services__list-item-title">
+                            Telegram dev
+                        </div>
+                        <div class="services__list-item-body">
+                            <div class="services__list-products">
+                                <div class="services__list-products-item">
+                                    Chat bots
+                                </div>
+                                <div class="services__list-products-item">
+                                    Telegram apps
+                                </div>
+                            </div>
+                            <div class="services__list-item-description">
+                                Our team develops Telegram-based chatbots and applications. With these tools, you can automate routine user interactions and ensure sales through messaging
+                            </div>
+                            <div class="services__list-item-price">
+                                from $2000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--   /Services     -->
+
+        <section id="connect">
+            <div class="connect container">
+                <div class="connect__left">
+                    <img src="~/assets/img/connect-img.png" alt="">
+                    <div class="title">
+                        let’s connect
+                    </div>
+                </div>
+                <div class="connect__right">
+                    <div class="connect__right-item">
+                        <div class="connect__right-item-title">
+                            WEB3 and chatbots projects
+                        </div>
+                        <div class="connect__right-item-body">
+                            <div class="img-container">
+
+                            </div>
+                            <div class="connect__right-item-body-text">
+                                <div class="name">
+                                    Dmitriy
+                                </div>
+                                <div class="connect-tg">
+                                    [CONNECT IN TELEGRAM]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="connect__right-item">
+                        <div class="connect__right-item-title">
+                            Marketing and web-design projects
+                        </div>
+                        <div class="connect__right-item-body">
+                            <div class="img-container">
+
+                            </div>
+                            <div class="connect__right-item-body-text">
+                                <div class="name">
+                                    Yaroslav
+                                </div>
+                                <div class="connect-tg">
+                                    [CONNECT IN TELEGRAM]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dots">
+                <div class="">
+
+                </div>
+                <div class="">
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
 
 </template>
 

@@ -1,0 +1,123 @@
+#connect {
+    background: $black;
+    position: relative;
+
+}
+
+.connect {
+    height: 610px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+        height: 330px;
+    }
+
+    &__left {
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column-reverse;
+        width: 830px;
+
+        .title {
+            color: $white;
+            font-family: 'Affect_bold';
+            font-size: 160px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 90%; /* 144px */
+            letter-spacing: 8px;
+            text-transform: uppercase;
+
+            z-index: 3;
+
+        }
+
+        img {
+
+            position: absolute;
+            left: 125px;
+            bottom: 60px;
+
+            width: 530px;
+            height: 360px;
+            flex-shrink: 0;
+        }
+
+    }
+
+    &__right {
+        width: 370px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &-item {
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-title {
+                color: $white;
+                font-family: "Affect_bold";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 20px */
+                text-transform: uppercase;
+            }
+
+            &-body {
+
+                display: flex;
+                gap: 20px;
+
+                .img-container {
+                    width: 110px;
+                    height: 110px;
+                    background: var(--Fill-Gray-100, #DFDFDF);
+                    border-radius: 50%;
+                }
+
+                &-text {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 8px;
+
+                    .name {
+                        color: $white;
+                        font-family: "PP Neue Montreal Mono";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 125%; /* 17.5px */
+                    }
+
+                    .connect-tg {
+                        color: var(--Fill-Accent, #FFDE9F);
+                        font-family: "PP Neue Montreal Mono";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 125%; /* 17.5px */
+
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
