@@ -105,15 +105,14 @@ export default {
 </script>
 
 <template>
-    <header class="d-flex justify-content-center">
+    <header id="header" class="d-flex justify-content-center">
         <div class="content d-flex flex-column align-items-center">
             <div class="header-top-part d-flex justify-content-between">
                 <div class="header-left-side d-flex flex-column position-relative">
                     <nav class="d-flex justify-content-between mt-4">
-                        <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Portfolio">Portfolio</span>]</a>
-                        <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Services">Services</span>]</a>
-                        <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="About us">About us</span>]</a>
-                        <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Contacts">Contacts</span>]</a>
+                        <a href="#our-works" class="nav-link">[<span class="shuffle-text" data-initial-text="Portfolio">Portfolio</span>]</a>
+                        <a href="#services" class="nav-link">[<span class="shuffle-text" data-initial-text="Services">Services</span>]</a>
+                        <a href="#connect" class="nav-link">[<span class="shuffle-text" data-initial-text="Contacts">Contacts</span>]</a>
                     </nav>
                     <div class="header-title">
                         <div class="header-side-title d-flex left-side">
@@ -131,7 +130,7 @@ export default {
 
                 </div>
                 <div class="header-right-side d-flex flex-column align-items-end position-relative">
-                    <div class="d-flex justify-content-between mt-4 col-8 ">
+                    <div class="d-flex justify-content-between mt-4 col-10 ">
                         <a href="#" class="nav-link d-flex align-items-center header-localization">
                             <span class="header-localization-rectangle mx-2"></span><span class="" data-initial-text="EN">EN</span>
                         </a>
@@ -435,10 +434,13 @@ export default {
                 </div>
 
             </div>
+            <img src="~/assets/img/connect-hand.png" alt="" class="hand">
         </section>
         <!--   /Services     -->
 
+        <!--   Connect     -->
         <section id="connect">
+
             <div class="connect container">
                 <div class="connect__left">
                     <img src="~/assets/img/connect-img.png" alt="">
@@ -488,16 +490,131 @@ export default {
 
             <div class="dots">
                 <div class="">
-
+                    •••• • •−•• •−•• −−− •−•−•− ••−• ••− − ••− •−• • −− •− •−• −•− − −−••−− •−•• • − ••• −••• ••− •• •−•• −•• ••• −−− −− • − •••• •• −• −−• •− •−− • ••• −−− −− •
                 </div>
                 <div class="">
-
+                    •••• • •−•• •−•• −−− •−•−•− ••−• ••− − ••− •−• • −− •− •−• −•− − −−••−− •−•• • − ••• −••• ••− •• •−•• −•• ••• −−− −− • − •••• •• −• −−• •− •−− • ••• −−− −− •
                 </div>
             </div>
 
         </section>
+        <!--   /Connect     -->
 
     </main>
+
+    <footer class="w-100 d-flex justify-content-center">
+        <div class="container footer__container">
+            <div class="footer__title-block">
+                <div class="footer__title">
+                    FUTURE MARKT
+                </div>
+                <div class="footer__subtitle">
+                    Digital agency
+                </div>
+            </div>
+            <div class="footer__navigation">
+
+                <div class="footer__navigation-block">
+                    <div class="footer__navigation-title">
+                        Services
+                    </div>
+                    <div class="footer__navigation-list">
+                        <div class="footer__navigation-list-item">
+                            Web3
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Web-design
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Marketing
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Chatbots
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__navigation-block">
+                    <div class="footer__navigation-title">
+                        Sections
+                    </div>
+                    <div class="footer__navigation-list">
+                        <div class="footer__navigation-list-item">
+                            Cases
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Services
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            About us
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Contacts
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__navigation-block">
+                    <div class="footer__navigation-title">
+                        Contacts
+                    </div>
+                    <div class="footer__navigation-list">
+                        <div class="footer__navigation-list-item">
+                            To order a project:
+                        </div>
+                        <div class="footer__navigation-list-item yellow">
+                            Telegram
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            For all other questions:
+                        </div>
+                        <div class="footer__navigation-list-item yellow">
+                            cmo@futuremarkt.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__navigation-block">
+                    <div class="footer__navigation-title">
+                        Follow us
+                    </div>
+                    <div class="footer__navigation-list">
+                        <div class="footer__navigation-list-item">
+                            Behance
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Instagram
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            VK
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Youtube
+                        </div>
+                        <div class="footer__navigation-list-item">
+                            Telegram channel
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__copyright">
+                <div class="footer__copyright-text">
+                    © Future Markt 2012–2023 All rights reserved
+                </div>
+                <div class="footer__copyright-links">
+                    <div class="footer__copyright-links-privacy">
+                        Privacy
+                    </div>
+                    <a class="footer__copyright-links-up" href="#header">
+                        <img src="~/assets/img/arrow-top.svg"> UP
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 </template>
 

@@ -10,6 +10,7 @@
 @import "./blocks/about";
 @import "./blocks/services";
 @import "./blocks/connect";
+@import "./blocks/footer";
 
 
 
@@ -21,4 +22,8 @@ section {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.yellow {
+    color: #FFDE9F;
 }

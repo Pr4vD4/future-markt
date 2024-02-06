@@ -1,7 +1,7 @@
 #connect {
     background: $black;
     position: relative;
-
+    overflow: hidden;
 }
 
 .connect {
@@ -121,3 +121,28 @@
     }
 
 }
+
+.dots {
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+
+    display: flex;
+    gap: 25px;
+
+    div {
+        white-space: nowrap;
+
+        color: var(--Fill-Gray-500, #4C4C4C);
+        text-align: center;
+        font-family: 'Affect_bold';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%; /* 30px */
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+
+}
+

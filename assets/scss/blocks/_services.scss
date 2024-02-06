@@ -1,5 +1,6 @@
 #services {
     background-color: #DFDFDF;
+    position: relative;
 }
 
 .services {
@@ -113,5 +114,20 @@
         }
 
     }
+
+}
+
+.hand {
+    position: absolute;
+    left: -70px;
+    bottom: -170px;
+    //transform: rotateY(30deg);
+
+    width: 500px;
+    height: 300px;
+    z-index: 2;
+    object-fit: contain;
+
+    display: none;
 
 }
