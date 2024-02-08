@@ -17,6 +17,9 @@
 body {
     overflow-x: hidden;
 }
+#__nuxt {
+    overflow-x: hidden;
+}
 
 .reverse {
     transform: rotateY(180deg);
@@ -32,22 +35,26 @@ section {
     color: #FFDE9F;
 }
 
-body::-webkit-scrollbar {
-    width: 8px;
-    height: 6px;
+@media screen and (min-width: 1024px) {
+
+    body::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+    }
+    body::-webkit-scrollbar-track {
+        width: 8px;
+        border-radius: 10px;
+        background: rgba(0,0,0,0.1);
+    }
+    body::-webkit-scrollbar-thumb{
+        border-radius: 15px;
+        background: rgba(0,0,0,0.3);
+    }
+    body::-webkit-scrollbar-thumb:hover{
+        background: rgba(0,0,0,0.4);
+    }
+    body::-webkit-scrollbar-thumb:active{
+        background: rgba(0,0,0,.5);
+    }
 }
-body::-webkit-scrollbar-track {
-    width: 8px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.1);
-}
-body::-webkit-scrollbar-thumb{
-    border-radius: 15px;
-    background: rgba(0,0,0,0.3);
-}
-body::-webkit-scrollbar-thumb:hover{
-    background: rgba(0,0,0,0.4);
-}
-body::-webkit-scrollbar-thumb:active{
-    background: rgba(0,0,0,.5);
-}
+
