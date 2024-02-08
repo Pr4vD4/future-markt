@@ -106,7 +106,7 @@ export default {
 
 <template>
     <header id="header" class="d-flex justify-content-center">
-        <div class="content d-flex flex-column align-items-center">
+        <div class="content">
             <div class="header-top-part d-flex justify-content-between">
                 <div class="header-left-side d-flex flex-column position-relative">
                     <nav class="mt-4 desktop">
@@ -117,7 +117,7 @@ export default {
                     <nav class="mobile">
                         <img src="~/assets/img/icon_menu.svg" alt="" class="menu menu-toggle">
                     </nav>
-                    <div class="header-title">
+                    <div class="header-title header-title-desktop">
                         <div class="header-side-title d-flex left-side">
                             <span class="">F</span>
                             <span class="">U</span>
@@ -133,7 +133,7 @@ export default {
 
                 </div>
                 <div class="header-right-side d-flex flex-column align-items-end position-relative">
-                    <div class="d-flex justify-content-between mt-4 col-10 ">
+                    <div class="d-flex justify-content-between mt-4 col-10 header-right-side-top">
                         <a href="#" class="nav-link d-flex align-items-center header-localization">
                             <span class="" data-initial-text="EN">EN</span><img src="~/assets/img/dropdown.svg" alt="" class="dropdown-icon">
                         </a>
@@ -141,7 +141,7 @@ export default {
                                 class="header-nav-link-arrow"><img
                                 src="~/assets/img/Arrow.svg" alt="arrow"></span>]</a>
                     </div>
-                    <div class="header-title">
+                    <div class="header-title header-title-desktop">
                         <div class="header-side-title right-side">
                             <span class="">M</span><span class="">A</span><span class="">R</span><span class="">K</span><span class="">T</span>
                         </div>
@@ -152,7 +152,20 @@ export default {
 
                 </div>
             </div>
-            <div class="header-bottom-part d-flex justify-content-between align-items-center">
+            <div class="header__title-mobile">
+                <div class="title-container">
+                    <div class="title">
+                        Future markt
+                    </div>
+                    <div class="subtitle">
+                        Digital agency
+                    </div>
+                </div>
+                <div class="title-text">
+                    We are digital agency that  is crazy about web3, web design, marketing and chatbots projects
+                </div>
+            </div>
+            <div class="header-bottom-part justify-content-between align-items-center">
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web design">Web Design</span>]</a>
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web 3">Web 3</span>]</a>
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Marketing">Marketing</span>]</a>
@@ -168,7 +181,8 @@ export default {
 
         </div>
         <canvas class="noise"></canvas>
-        <img src="~/assets/img/man.webp" alt="man" class="man">
+        <img src="~/assets/img/man.webp" alt="man" class="man man-desktop">
+        <img src="~/assets/img/man-mobile.webp" alt="man" class="man man-mobile">
 
 
         <div class="mobile__content hidden">
@@ -182,6 +196,12 @@ export default {
             <a href="#our-works" class="nav-link">[<span class="shuffle-text" data-initial-text="Portfolio">Portfolio</span>]</a>
             <a href="#services" class="nav-link">[<span class="shuffle-text" data-initial-text="Services">Services</span>]</a>
             <a href="#connect" class="nav-link">[<span class="shuffle-text" data-initial-text="Contacts">Contacts</span>]</a>
+
+            <br>
+            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web design">Web Design</span>]</a>
+            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web 3">Web 3</span>]</a>
+            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Marketing">Marketing</span>]</a>
+            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="WEB DEV">WEB DEV</span>]</a>
 
             <a href="#" class="nav-link d-flex align-items-center header-localization">
                 <span class="" data-initial-text="EN">EN</span><img src="~/assets/img/dropdown.svg" alt="" class="dropdown-icon">

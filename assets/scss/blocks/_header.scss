@@ -7,9 +7,17 @@ header {
 }
 
 header .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     height: 100%;
     width: 100%;
+
+    @media screen and (max-width: $tablet-768){
+        justify-content: space-between;
+    }
+
 }
 
 .content > * {
@@ -25,15 +33,68 @@ header img {
 .header-top-part {
     width: 85%;
     height: 70%;
+    @media screen and (max-width: $tablet-768){
+        width: 90%;
+        height: 10%;
+    }
 }
 
 .header-bottom-part {
+    display: flex;
     width: 85%;
     height: 30%;
+    @media screen and (max-width: $tablet-768){
+        width: 90%;
+        height: 15%;
+
+        .nav-link {
+            color: var(--Fill-White, #F7F7F7);
+            text-align: center;
+            font-family: "PP Neue Montreal Mono";
+            font-size: 29.378px!important;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 29.378px */
+            letter-spacing: -1.763px!important;
+            text-transform: uppercase;
+        }
+
+    }
 }
 
 .header-right-side {
     width: 36%;
+
+    &-top {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+
+        @media screen and (max-width: $tablet-768){
+            flex: 0 0 auto;
+            width: 100%;
+
+            .nav-link-colored {
+                font-size: 20px!important;
+            }
+
+        }
+
+        @media screen and (max-width: $mobile-450){
+            flex: 0 0 auto;
+            width: 140%;
+
+            .nav-link-colored {
+                font-size: 14px!important;
+            }
+
+        }
+
+    }
+
+    @media screen and (max-width: $tablet-768){
+        width: 40%;
+    }
+
 }
 
 .header-left-side {
@@ -144,20 +205,37 @@ header img {
 .noise {
     top: 11%;
     position: absolute;
-    height: 20vh;
+    height: 30vh;
     z-index: 0;
     opacity: 1;
     width: 40vw;
+
+    @media screen and (max-width: $tablet-768){
+        top: 30%;
+    }
+
 }
 
 .left-noise {
     margin-right: 12vw;
     width: 12vw;
+    @media screen and (max-width: $tablet-768){
+        top: 30%;
+        width: 20vw;
+        margin-right: 20vw;
+    }
+
+    @media screen and (max-width: $mobile-450){
+        top: 40%;
+    }
 }
 
 .right-noise {
     margin-left: 15vw;
     width: 12vw;
+    @media screen and (max-width: $mobile-450){
+        top: 40%;
+    }
 }
 
 .man {
@@ -218,6 +296,10 @@ nav.desktop {
 
     transition: all .25s;
 
+    @media screen and (max-width: $mobile-450){
+        gap: 30px;
+    }
+
     .nav-link {
         color: var(--Fill-White, #F7F7F7);
         font-family: "PP Neue Montreal Mono";
@@ -225,6 +307,20 @@ nav.desktop {
         font-style: normal;
         font-weight: 500;
         line-height: 100%; /* 48px */
+
+        @media screen and (max-width: $mobile-450){
+            color: var(--Fill-White, #F7F7F7);
+
+            /* Desktop 1300px/H4 */
+            font-family: 'Affect_bold';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 24px */
+            letter-spacing: 0.72px;
+            text-transform: uppercase;
+        }
+
     }
 
     .header-localization {
@@ -252,6 +348,9 @@ nav.desktop {
             font-weight: 500;
             line-height: 100%; /* 20px */
             text-transform: uppercase;
+            @media screen and (max-width: $mobile-450){
+                font-size: 14px;
+            }
         }
 
     }
@@ -270,10 +369,20 @@ nav.desktop {
 
 nav.mobile {
     margin-top: 38px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     position: initial;
+
+    @media screen and (max-width: $mobile-450){
+        margin-top: 30px;
+    }
+
 }
+
+.menu {
+    z-index: 5;
+}
+
 
 @media screen and (max-width: $tablet-1024) {
 
@@ -281,8 +390,123 @@ nav.mobile {
         display: none;
     }
 
+    nav.mobile {
+        display: flex;
+    }
+
     .header-right-side .header-localization {
         display: none!important;
+    }
+
+}
+
+nav.mobile {
+    display: none;
+}
+.header__title-mobile {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: -88%;
+
+    .title-container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            color: var(--Fill-White, #F7F7F7);
+            font-family: 'Affect_bold';
+            font-size: 107px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 107px */
+            letter-spacing: -2.14px;
+            text-transform: uppercase;
+
+            @media screen and (max-width: $mobile-450){
+                font-size: 48px;
+                letter-spacing: -0.96px;
+            }
+
+        }
+
+        .subtitle {
+            display: flex;
+            justify-content: center;
+            color: var(--Fill-White, #F7F7F7);
+            font-family: 'Affect_light';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 125%; /* 30px */
+            letter-spacing: 3.6px;
+            text-transform: uppercase;
+        }
+    }
+
+    .title-text {
+        display: flex;
+        justify-content: center;
+        width: 490px;
+        color: var(--Fill-White, #F7F7F7);
+        text-align: center;
+        font-family: 'Affect_400';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 20px */
+        text-transform: uppercase;
+
+        @media screen and (max-width: $mobile-450){
+            width: 330px;
+        }
+
+    }
+
+}
+
+.man-mobile {
+    display: none;
+}
+
+@media screen and (max-width: $tablet-768){
+    .man-desktop {
+        display: none;
+    }
+    .man-mobile {
+        z-index: 2;
+        display: block;
+        height: 80%;
+        align-self: flex-end;
+    }
+
+    .header-title-desktop {
+        display: none;
+    }
+    .header__title-mobile {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: $mobile-450){
+    .header-bottom-part {
+        display: none!important;
+    }
+
+    .content {
+        justify-content: flex-start!important;
+    }
+
+    .header__title-mobile {
+        margin-top: 0;
+    }
+
+    .man-mobile {
+        height: 70%;
     }
 
 }
