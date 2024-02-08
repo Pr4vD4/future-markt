@@ -1,0 +1,41 @@
+@media screen and (max-width: $tablet-1024) {
+
+    h1 {
+        font-size: $tablet-h1-font-size!important;
+        letter-spacing: $tablet-h1-letter-spacing!important;
+    }
+
+    h2 {
+        font-size: $tablet-h2-font-size!important;
+
+    }
+
+    .our-works, .about, .services {
+
+        margin-top: 60px;
+        margin-bottom: 100px;
+
+    }
+
+}
+
+@media screen and (max-width: $mobile-450) {
+
+    h1 {
+        font-size: $mobile-h1-font-size!important;
+        letter-spacing: $mobile-h1-letter-spacing!important;
+    }
+
+    h2 {
+        font-size: $mobile-h2-font-size!important;
+
+    }
+
+    .our-works, .about, .services {
+
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+    }
+
+}

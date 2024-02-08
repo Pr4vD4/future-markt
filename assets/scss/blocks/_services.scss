@@ -26,9 +26,14 @@
 
         display: flex;
         flex-direction: column;
-        gap: 45px;
+        gap: 12px;
 
         margin-top: 90px;
+
+        @media screen and (max-width: $mobile-450) {
+
+            margin-top: 40px;
+        }
 
         &-item {
 
@@ -38,6 +43,10 @@
 
             min-height: 150px;
             width: 100%;
+
+            padding-bottom: 20px;
+            border-bottom: 1px solid #D3D3D3;
+
 
 
             &-title {
@@ -57,13 +66,21 @@
                 position: relative;
                 display: flex;
                 justify-content: space-between;
+
+                @media screen and (max-width: $mobile-450) {
+
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
             }
 
             &-description {
-                position: absolute;
-                right: 22%;
-
-                width: 350px;
+                //position: absolute;
+                //right: 22%;
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
 
                 color: $services-description;
 
@@ -75,6 +92,20 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 100%; /* 14px */
+
+                span {
+                    width: 350px;
+                    @media screen and (max-width: $tablet-1024) {
+                        width: 260px;
+                    }
+                }
+
+
+                @media screen and (max-width: $tablet-768) {
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 260px;
+                }
 
             }
 
@@ -89,6 +120,7 @@
                 font-weight: 700;
                 line-height: 100%; /* 21px */
                 text-transform: uppercase;
+
 
             }
 

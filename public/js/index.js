@@ -38,3 +38,8 @@ document.querySelectorAll('.noise').forEach((el) => {
     crete_noise(el)
 })
 
+document.querySelectorAll('.menu-toggle').forEach((el) => {
+    el.addEventListener('click', () => {
+        document.querySelector('.mobile__content').classList.toggle('hidden')
+    })
+})

@@ -109,10 +109,13 @@ export default {
         <div class="content d-flex flex-column align-items-center">
             <div class="header-top-part d-flex justify-content-between">
                 <div class="header-left-side d-flex flex-column position-relative">
-                    <nav class="d-flex justify-content-between mt-4">
+                    <nav class="mt-4 desktop">
                         <a href="#our-works" class="nav-link">[<span class="shuffle-text" data-initial-text="Portfolio">Portfolio</span>]</a>
                         <a href="#services" class="nav-link">[<span class="shuffle-text" data-initial-text="Services">Services</span>]</a>
                         <a href="#connect" class="nav-link">[<span class="shuffle-text" data-initial-text="Contacts">Contacts</span>]</a>
+                    </nav>
+                    <nav class="mobile">
+                        <img src="~/assets/img/icon_menu.svg" alt="" class="menu menu-toggle">
                     </nav>
                     <div class="header-title">
                         <div class="header-side-title d-flex left-side">
@@ -132,7 +135,7 @@ export default {
                 <div class="header-right-side d-flex flex-column align-items-end position-relative">
                     <div class="d-flex justify-content-between mt-4 col-10 ">
                         <a href="#" class="nav-link d-flex align-items-center header-localization">
-                            <span class="header-localization-rectangle mx-2"></span><span class="" data-initial-text="EN">EN</span>
+                            <span class="" data-initial-text="EN">EN</span><img src="~/assets/img/dropdown.svg" alt="" class="dropdown-icon">
                         </a>
                         <a href="#" class="nav-link nav-link-colored">[<span class="shuffle-text" data-initial-text="Discuss the future">Discuss the future</span><span
                                 class="header-nav-link-arrow"><img
@@ -153,7 +156,7 @@ export default {
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web design">Web Design</span>]</a>
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web 3">Web 3</span>]</a>
                 <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Marketing">Marketing</span>]</a>
-                <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Chatbots">Chatbots</span>]</a>
+                <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="WEB DEV">WEB DEV</span>]</a>
             </div>
         </div>
         <div class="scrolling-text-container left-noise">
@@ -166,6 +169,26 @@ export default {
         </div>
         <canvas class="noise"></canvas>
         <img src="~/assets/img/man.webp" alt="man" class="man">
+
+
+        <div class="mobile__content hidden">
+            <div class="mobile__content-top mt-4">
+                <img src="~/assets/img/icon_menu-close.svg" alt="" class="menu-toggle">
+
+                <a href="#" class="nav-link nav-link-colored">[<span class="shuffle-text" data-initial-text="Discuss the future">Discuss the future</span><span
+                        class="header-nav-link-arrow"><img
+                        src="~/assets/img/Arrow.svg" alt="arrow"></span>]</a>
+            </div>
+            <a href="#our-works" class="nav-link">[<span class="shuffle-text" data-initial-text="Portfolio">Portfolio</span>]</a>
+            <a href="#services" class="nav-link">[<span class="shuffle-text" data-initial-text="Services">Services</span>]</a>
+            <a href="#connect" class="nav-link">[<span class="shuffle-text" data-initial-text="Contacts">Contacts</span>]</a>
+
+            <a href="#" class="nav-link d-flex align-items-center header-localization">
+                <span class="" data-initial-text="EN">EN</span><img src="~/assets/img/dropdown.svg" alt="" class="dropdown-icon">
+            </a>
+
+        </div>
+
     </header>
 
     <main>
@@ -187,6 +210,13 @@ export default {
                     <div class="filter ">Telegram Apps [0]</div>
                 </div>
 
+                <div class="filters-select">
+                    <div class="filters-select-item filters-select-item__active">All [0]</div>
+                    <div class="filters-select-item">Smart contracts [0]</div>
+                    <div class="filters-select-item">De-fi [0]</div>
+                    <div class="filters-select-item">dApp [0]</div>
+                    <div class="filters-select-item">White/Litepaper [0]</div>
+                </div>
 
                 <!--       Cardboard         -->
                 <div class="cardboard container-fluid">
@@ -297,6 +327,16 @@ export default {
                             <span>next</span>
                         </div>
                     </div>
+                    
+                    <div class="pagination-mobile">
+                        <div class="pagination-mobile-btn">
+                            [Show more]
+                        </div>
+                        <div class="pagination-mobile-btn">
+                            <img src="~/assets/img/arrow-top-black.svg" alt="">[Minimize]
+                        </div>
+                    </div>
+                    
                 </div>
                 <!--       /Pagination         -->
 
@@ -343,16 +383,19 @@ export default {
                                     De-Fi
                                 </div>
                                 <div class="services__list-products-item">
-                                    White/Litepaper 12312 123 123
+                                    White/Litepaper
                                 </div>
                             </div>
                             <div class="services__list-item-description">
-                                We strive to implement the web3 products as soon as possible so that it starts generating profit. Then we conduct tests and make corrections until the project becomes
+                                <span>
+                                    We strive to implement the web3 products as soon as possible so that it starts generating profit. Then we conduct tests and make corrections until the project becomes
                                 perfect
+                                </span>
+                                <div class="services__list-item-price">
+                                    from $3000
+                                </div>
                             </div>
-                            <div class="services__list-item-price">
-                                from $3000
-                            </div>
+
                         </div>
                     </div>
                     <div class="services__list-item">
@@ -375,11 +418,12 @@ export default {
                                 </div>
                             </div>
                             <div class="services__list-item-description">
-                                We turn your technical specifications into real business tool. We love large websites and web applications, but we also work on single-page sites
+                                <span>We turn your technical specifications into real business tool. We love large websites and web applications, but we also work on single-page sites</span>
+                                <div class="services__list-item-price">
+                                    from $1000
+                                </div>
                             </div>
-                            <div class="services__list-item-price">
-                                from $1000
-                            </div>
+
                         </div>
                     </div>
                     <div class="services__list-item">
@@ -402,12 +446,13 @@ export default {
                                 </div>
                             </div>
                             <div class="services__list-item-description">
-                                We take a data-driven approach to create tailored campaigns that resonate with your target audience. From social media to email marketing, we'll help you reach your
-                                goals and increase ROI
+                                <span>We take a data-driven approach to create tailored campaigns that resonate with your target audience. From social media to email marketing, we'll help you reach your
+                                    goals and increase ROI</span>
+                                <div class="services__list-item-price">
+                                    from $1200
+                                </div>
                             </div>
-                            <div class="services__list-item-price">
-                                from $1200
-                            </div>
+
                         </div>
                     </div>
                     <div class="services__list-item">
@@ -424,11 +469,12 @@ export default {
                                 </div>
                             </div>
                             <div class="services__list-item-description">
-                                Our team develops Telegram-based chatbots and applications. With these tools, you can automate routine user interactions and ensure sales through messaging
+                                <span>Our team develops Telegram-based chatbots and applications. With these tools, you can automate routine user interactions and ensure sales through messaging</span>
+                                <div class="services__list-item-price">
+                                    from $2000
+                                </div>
                             </div>
-                            <div class="services__list-item-price">
-                                from $2000
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -505,11 +551,21 @@ export default {
     <footer class="w-100 d-flex justify-content-center">
         <div class="container footer__container">
             <div class="footer__title-block">
-                <div class="footer__title">
-                    FUTURE MARKT
+                <div class="footer__titles">
+                    <div class="footer__title">
+                        FUTURE MARKT
+                    </div>
+                    <div class="footer__subtitle">
+                        Digital agency
+                    </div>
                 </div>
-                <div class="footer__subtitle">
-                    Digital agency
+                <div class="footer__copyright-mobile">
+                    <div class="footer__copyright-mobile-text">
+                        © Future Markt 2012–2023 All rights reserved
+                    </div>
+                    <div class="footer__copyright-mobile-text">
+                        Privacy
+                    </div>
                 </div>
             </div>
             <div class="footer__navigation">

@@ -3,8 +3,11 @@
 }
 
 .about {
+
     margin-top: 80px;
     margin-bottom: 100px;
+
+
 
     .title {
         h1 {
@@ -23,7 +26,7 @@
             color: $white;
             text-align: center;
 
-            margin-top: 60px;
+            margin-top: 52px;
 
             /* Desktop 1300px/Subtitle */
             font-family: 'Affect_bold';
@@ -37,6 +40,10 @@
                 color: $gray;
             }
 
+            @media screen and (max-width: $tablet-1024) {
+                margin-top: 40px;
+            }
+
         }
 
     }
@@ -47,6 +54,10 @@
 
         img {
             width: 100%;
+        }
+
+        @media screen and (max-width: $tablet-1024) {
+            margin-top: 70px;
         }
 
     }

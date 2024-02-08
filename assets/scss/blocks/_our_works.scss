@@ -4,8 +4,13 @@
 }
 
 .our-works {
+
+    display: flex;
+    flex-direction: column;
+
     margin-top: 80px;
     margin-bottom: 140px;
+
 
     .title h1 {
         color: $black;
@@ -13,19 +18,26 @@
 
         /* Desktop 1300px/H2 */
         font-family: 'Affect_bold';
-        font-size: 160px;
+        font-size: $desktop-h1-font-size;
         font-style: normal;
         font-weight: 700;
         line-height: 100%; /* 160px */
-        letter-spacing: 8px;
+        letter-spacing: $desktop-h1-letter-spacing;
         text-transform: uppercase;
+
+        @media screen and (max-width: $mobile-450) {
+
+            margin-bottom: 20px;
+
+        }
+
     }
 
     .title h2 {
         color: $black;
         text-align: center;
         font-family: 'Affect_bold';
-        font-size: 50px;
+        font-size: $desktop-h2-font-size;
         font-style: normal;
         font-weight: 700;
         line-height: 100%; /* 50px */
@@ -35,6 +47,8 @@
     .filter {
         color: $inactive-text;
 
+        white-space: nowrap;
+
         /* Desktop 1300px/Filtration */
         font-family: "PP Neue Montreal Mono";
         font-size: 20px;
@@ -43,33 +57,114 @@
         line-height: 100%; /* 20px */
         text-transform: uppercase;
 
-        margin-left: 30px;
 
-        padding: 5px 2px;
+        padding: 5px 0;
 
         cursor: pointer;
 
         &__active {
             color: $black;
-            box-shadow: 0 3px 2px -2px $black;
+            box-shadow: 0 3px 0 -1px $black;
+        }
+
+        @media screen and (max-width: $mobile-450) {
+
+            font-size: 12px;
+
         }
 
     }
 
     .filters {
+        display: flex;
+        align-self: center;
         margin-top: 60px;
-    }
+        gap: 30px;
+        flex-wrap: wrap;
 
-    .filters:last-child {
-        margin-left: 0;
+        @media screen and (max-width: $tablet-1024) {
+            width: 700px;
+            row-gap: 16px;
+
+            margin-top: 40px;
+
+        }
+
+        @media screen and (max-width: $mobile-450) {
+
+            width: 100%;
+            gap: 8px;
+        }
+
+        &-select {
+            display: none;
+            align-self: center;
+            @media screen and (max-width: $tablet-1024) {
+
+                display: flex;
+                padding: 12px 15px;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+
+                width: 700px;
+                border-radius: 5px;
+                border: 1px solid var(--Fill-Gray-300, #A0A0A0);
+
+                margin-top: 24px;
+
+            }
+
+            @media screen and (max-width: $mobile-450) {
+
+                width: 100%;
+                gap: 8px;
+            }
+
+            &-item {
+
+                color: var(--Fill-Gray-300, #A0A0A0);
+                text-align: center;
+
+                /* Desktop 1300px/Text */
+                font-family: "PP Neue Montreal Mono";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%; /* 14px */
+
+                padding: 2px 0;
+
+                @media screen and (max-width: $mobile-450) {
+                    font-size: 12px;
+                }
+
+                &__active {
+                    color: $black;
+                    box-shadow: 0 3px 0 -1px $black;
+                }
+
+            }
+
+        }
+
     }
 
     .cardboard {
+        padding: 0;
         margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
-        gap: 30px
+        gap: 30px;
         //flex-direction: column;
+
+        @media screen and (max-width: $tablet-1024) {
+            column-gap: 40px;
+            row-gap: 25px;
+        }
+
     }
 
     .big-card {
@@ -80,6 +175,11 @@
             @include card-img-container;
             height: 640px;
             width: 100%;
+
+            @media screen and (max-width: $mobile-450) {
+                height: 330px;
+            }
+
         }
 
     }
@@ -87,6 +187,16 @@
     .card-small {
         @include card;
         width: calc(50% - 30px / 2);
+
+        @media screen and (max-width: $tablet-1024) {
+            width: calc(50% - 40px / 2);
+        }
+
+        @media screen and (max-width: $mobile-450) {
+
+            width: 100%;
+        }
+
     }
 
     .card {
@@ -95,6 +205,11 @@
             @include card-img-container;
             width: 100%;
             height: 345px;
+
+            @media screen and (max-width: $mobile-450) {
+                height: 330px;
+            }
+
         }
 
         &-text {
@@ -141,6 +256,9 @@
         border-radius: 5px;
         border: 1px solid $black;
 
+        @media screen and (max-width: $tablet-1024) {
+            display: none;
+        }
 
         &__container {
             margin-top: 40px;
@@ -216,6 +334,41 @@
             line-height: 100%; /* 14px */
 
             text-transform: uppercase;
+        }
+
+        &-mobile {
+            display: none;
+            gap: 60px;
+            @media screen and (max-width: $tablet-1024) {
+                display: flex;
+            }
+            &-btn {
+                display: flex;
+                align-items: center;
+
+                color: $black;
+
+                /* Desktop 1300px/Button text */
+                font-family: "PP Neue Montreal Mono";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%; /* 20px */
+                text-transform: uppercase;
+
+                cursor: pointer;
+
+                @media screen and (max-width: $mobile-450) {
+                    font-size: 16px;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+            }
+
         }
 
     }
