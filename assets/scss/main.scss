@@ -14,6 +14,9 @@
 @import "./main_media";
 
 
+body {
+    overflow-x: hidden;
+}
 
 .reverse {
     transform: rotateY(180deg);
@@ -34,6 +37,7 @@ body::-webkit-scrollbar {
     height: 6px;
 }
 body::-webkit-scrollbar-track {
+    width: 8px;
     border-radius: 10px;
     background: rgba(0,0,0,0.1);
 }
