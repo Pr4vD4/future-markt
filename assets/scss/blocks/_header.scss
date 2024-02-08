@@ -391,7 +391,7 @@ nav.mobile {
     }
 
     nav.mobile {
-        display: flex;
+        display: flex!important;
     }
 
     .header-right-side .header-localization {
@@ -400,7 +400,7 @@ nav.mobile {
 
 }
 
-nav.mobile {
+.man-mobile {
     display: none;
 }
 .header__title-mobile {
@@ -469,10 +469,6 @@ nav.mobile {
 
 }
 
-.man-mobile {
-    display: none;
-}
-
 @media screen and (max-width: $tablet-768){
     .man-desktop {
         display: none;
@@ -492,6 +488,10 @@ nav.mobile {
     }
 }
 
+.w450 {
+    display: none;
+}
+
 @media screen and (max-width: $mobile-450){
     .header-bottom-part {
         display: none!important;
@@ -509,4 +509,7 @@ nav.mobile {
         height: 70%;
     }
 
+    .w450 {
+        display: flex;
+    }
 }

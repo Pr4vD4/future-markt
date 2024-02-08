@@ -197,11 +197,11 @@ export default {
             <a href="#services" class="nav-link">[<span class="shuffle-text" data-initial-text="Services">Services</span>]</a>
             <a href="#connect" class="nav-link">[<span class="shuffle-text" data-initial-text="Contacts">Contacts</span>]</a>
 
-            <br>
-            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web design">Web Design</span>]</a>
-            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Web 3">Web 3</span>]</a>
-            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="Marketing">Marketing</span>]</a>
-            <a href="#" class="nav-link">[<span class="shuffle-text" data-initial-text="WEB DEV">WEB DEV</span>]</a>
+            <br class="w450">
+            <a href="#" class="nav-link w450">[<span class="shuffle-text" data-initial-text="Web design">Web Design</span>]</a>
+            <a href="#" class="nav-link w450">[<span class="shuffle-text" data-initial-text="Web 3">Web 3</span>]</a>
+            <a href="#" class="nav-link w450">[<span class="shuffle-text" data-initial-text="Marketing">Marketing</span>]</a>
+            <a href="#" class="nav-link w450">[<span class="shuffle-text" data-initial-text="WEB DEV">WEB DEV</span>]</a>
 
             <a href="#" class="nav-link d-flex align-items-center header-localization">
                 <span class="" data-initial-text="EN">EN</span><img src="~/assets/img/dropdown.svg" alt="" class="dropdown-icon">
